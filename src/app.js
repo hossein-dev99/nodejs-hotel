@@ -6,8 +6,6 @@ const middlewares = require("./middleware");
 const mongo = require("./db/mongo");
 const app = express();
 
-app.set("view engine" ,"ejs");
-app.set("views" ,"./src/views");
 middlewares.assemble(app);
 mongo.run();
 router.assemble(app);
