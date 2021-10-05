@@ -4,6 +4,7 @@ exports.index = async (req ,res) => {
         // hotel.create({
         //     name:"هتل اسپیناس پالاس",
         //     slug:"espinas_palace",
+        //     city:"تهران",
         //     address:"سعادت آباد-انتهای بزرگراه یادگار امام ، میدان بهرود",
         //     rate:"٥.٠",
         //     images_url:{
@@ -20,7 +21,7 @@ exports.index = async (req ,res) => {
         //     "صندوق امانات","سرویس بهداشتی فرنگی"],
         //     near_places:["پارک ژوراسیک"]
         // })
-    const hotels = await hotel.find({},{name:1,slug:1,address:1,rate:1,price:1,about:1,facilities:1,near_places:1,images_url:1});
+    const hotels = await hotel.find({},{name:1,slug:1,city:1,address:1,rate:1,price:1,about:1,facilities:1,near_places:1,images_url:1});
     res.status(200).send({
         hotels
     })
